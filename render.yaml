@@ -1,11 +1,5 @@
 services:
   - type: web
-    name: springboot-backend
+    name: excel-bulk-mail-backend
     runtime: docker
-    buildCommand: ./mvnw clean install
-    startCommand: java -jar target/*.jar
     plan: free
-    envVars:
-      - key: JAVA_TOOL_OPTIONS
-        value: -XX:+UseContainerSupport
-    
