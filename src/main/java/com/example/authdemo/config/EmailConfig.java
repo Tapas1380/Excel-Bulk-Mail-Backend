@@ -16,8 +16,8 @@ public class EmailConfig {
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
 
-        mailSender.setUsername("tapasranjans2001@gmail.com");
-        mailSender.setPassword("phpq jqdx gfba cbrb");  // Use the app password if 2FA is enabled
+        mailSender.setUsername("tapasranjanhr@gmail.com");
+        mailSender.setPassword("ovba lybv sdui xrev");  // Use the app password if 2FA is enabled
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
