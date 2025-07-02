@@ -27,7 +27,7 @@ public class EmailService {
             return;
         }
 
-        String resetLink = "https://excel-bulk-mail.onrender.com/reset-password/?token=" + token;
+        String resetLink = "https://excel-bulk-mail.onrender.com/#/reset-password/?token=" + token;
         String subject = "Password Reset Request";
         String body = "Click the link to reset your password: " + resetLink;
 
