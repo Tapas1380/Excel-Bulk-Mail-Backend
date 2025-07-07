@@ -18,30 +18,32 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "email", nullable = false, length = 255)
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "subject", nullable = false, length = 200)
     private String subject;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(name = "message", nullable = false, columnDefinition = "TEXT")
     private String message;
 
-    @Column(nullable = false)
+    @Column(name = "status", nullable = false, length = 20)
     private String status = "NEW"; // NEW, READ, REPLIED, ARCHIVED
 
-    @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
+        if (createdAt == null) {
+            createdAt = LocalDateTime.now();
+        }
     }
 
     @PreUpdate
