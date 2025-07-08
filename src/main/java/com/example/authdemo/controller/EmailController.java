@@ -21,7 +21,9 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/email")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {"http://localhost:4200", "http://127.0.0.1:4200"}, 
+allowedHeaders = "*",
+allowCredentials = "true")
 public class EmailController {
 
 
@@ -91,7 +93,8 @@ public class EmailController {
                 .body("Failed to send bulk emails: " + e.getMessage());
         }
     }
-    @PostMapping("/contact/send")
+   
+    @PostMapping("/contact")
     public ResponseEntity<Map<String, Object>> sendMessage(@Valid @RequestBody ContactMessage contactMessage) {
         Map<String, Object> response = new HashMap<>();
         
