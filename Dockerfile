@@ -17,7 +17,8 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy the generated JAR from the builder stage
-COPY --from=builder /app/target/*.war app.war
+COPY --from=builder /app/target/book-1.0-SNAPSHOT.war app.war
+
 
 # Expose port 8080 (Spring Boot default)
 EXPOSE 8080
