@@ -21,7 +21,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/email")
-@CrossOrigin(origins = {"http://localhost:4200", "https://tapas-ten.vercel.app/"}, 
+@CrossOrigin(origins = {"https://excel-bulk-mail.onrender.com", "https://tapas-ten.vercel.app/"}, 
 allowedHeaders = "*",
 allowCredentials = "true")
 public class EmailController {
