@@ -33,6 +33,7 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.addAllowedOrigin("https://www.tapasranjan-sahoo.online/#/view");
         configuration.addAllowedOrigin("https://excel-bulk-mail.onrender.com");
+        configuration.addAllowedOrigin("https://tapas-ashen.vercel.app/#/view");
         configuration.addAllowedOrigin("http://localhost:4200");
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
