@@ -31,9 +31,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.addAllowedOrigin("*");
+        configuration.addAllowedOrigin("https://www.tapasranjan-sahoo.online");
         configuration.addAllowedOrigin("https://excel-bulk-mail.onrender.com");
-        configuration.addAllowedOrigin("https://tapas-ashen.vercel.app/#/view");
+        configuration.addAllowedOrigin("https://tapas-ashen.vercel.app");
         configuration.addAllowedOrigin("http://localhost:4200");
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
